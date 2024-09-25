@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CALENDÁRIO DE ANIVERSÁRIANTES</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+    <!--#include virtual="menu/index.shtml" -->
+
+   
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>NOVO CADASTRO</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+  <div class="flex w-full max-w-md flex-col items-start space-y-4 rounded-lg bg-white p-6 shadow-lg">
+    <h1 class="text-2xl font-bold text-black">Cadastro de Aluno</h1>
+    <div class="grid w-full gap-4">
+      <div class="flex flex-col space-y-1.5">
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="name"
+        >
+          Nome
+        </label>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          id="name"
+          placeholder="Digite o nome do aluno"
+        />
+      </div>
+      <div class="flex flex-col space-y-1.5">
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="dob"
+        >
+          Data de Aniversário
+        </label>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          id="birthday"
+          type="date"
+        />
+      </div>
+    </div>
+    <div class="flex w-full justify-between">
+      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90"
+      id = "Cancelar"
+      type = "button"
+      >
+        Cancelar
+      </button>
+      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
+        Salvar
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="../../js/aluno/cadastro.js"></script>
+</html>

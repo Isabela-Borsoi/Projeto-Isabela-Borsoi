@@ -1,0 +1,30 @@
+
+  <div class="flex flex-col items-start space-y-4 rounded-lg bg-white p-6 shadow-lg">
+    <h1 class="text-2xl font-bold text-black">OPÇÕES:</h1>
+    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
+        <a
+        href="aluno/cadastro.shtml"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-accent hover:text-accent-foreground"
+      >
+        Adicionar um novo aluno
+    </a>
+    </button>
+    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
+    
+        <a
+        href="aluno/lista_alunos.shtml"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-accent hover:text-accent-foreground"
+      >
+      Alunos
+    </a>
+    </button>
+    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
+       
+        <a
+        href="aluno/removidos.shtml"
+        class="block px-4 py-2 text-sm text-gray-700 hover:bg-accent hover:text-accent-foreground"
+      >
+       Removidos Anteriormente
+    </a>
+    </button>
+  </div>
