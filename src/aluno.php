@@ -15,8 +15,9 @@ class alunos {
             id, 
             nome, 
             data_nascimento,
-            DATE_FORMAT(data_nascimento, '%d/%m/%Y') data_nascimento
-        FROM alunoss";
+            DATE_FORMAT(data_nascimento, '%d/%m/%Y') data_nascimento_formatado
+        FROM alunos
+        where excluido is false";
         $result = $this->conn->query($sql);
 
         $data = [];
@@ -33,8 +34,9 @@ class alunos {
         $sql = "SELECT 
             id, 
             nome, 
-            DATE_FORMAT(data_nascimento, '%Y-%m-%d') data_nascimento
-        FROM alunoss
+            data_nascimento,
+            DATE_FORMAT(data_nascimento, '%d/%m/%Y') data_nascimento_formatado
+        FROM alunos
         WHERE id = ?";
         $stm = $this->conn->prepare($sql);
 
@@ -54,7 +56,7 @@ class alunos {
     }
 
     function deleteById($id) {
-        $sql = "UPDATE alunoss SET excluido = TRUE WHERE id = ?";
+        $sql = "UPDATE alunos SET excluido = TRUE WHERE id = ?";
         $stm = $this->conn->prepare($sql);
 
         $stm->bind_param('i', $id);
@@ -78,7 +80,7 @@ class alunos {
         $stm->bind_param('ssi', $data['nome'], $data['data_nascimento'], $id);
         $stm->execute();
 
-        if ($stm->affected_rows > 0) {
+        if (!$stm->error) {
             return ['status' => 'ok', 'msg' => 'Registro atualizado com sucesso'];
         }
 
@@ -86,11 +88,11 @@ class alunos {
     }
 
     function create($data) {
-        $sql = "INSERT INTO alunoss (nome, data_nascimento) VALUES (?, ?)";
+        $sql = "INSERT INTO alunos (nome, data_nascimento) VALUES (?, ?)";
 
         $stm = $this->conn->prepare($sql);
 
-        $stm->bind_param('ss', $data['nome'], $data['documento'], $data['data_nascimento']);
+        $stm->bind_param('ss', $data['nome'], $data['data_nascimento']);
         $stm->execute();
 
         if ($stm->affected_rows > 0) {
@@ -120,7 +122,8 @@ if (!in_array($_SERVER['REQUEST_METHOD'], $allowed_methods)) {
 $alunos = new alunos($conn);
 
 if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-    echo json_encode($alunos->deleteById($_GET['id']));
+    $data = json_decode(file_get_contents("php://input"), true);
+    echo json_encode($alunos->deleteById($data['id']));
     return;
 }
 

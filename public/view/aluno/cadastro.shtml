@@ -12,6 +12,11 @@
   <div class="flex w-full max-w-md flex-col items-start space-y-4 rounded-lg bg-white p-6 shadow-lg">
     <h1 class="text-2xl font-bold text-black">Cadastro de Aluno</h1>
     <div class="grid w-full gap-4">
+      <form id="form">
+        <input
+          class="hidden"
+          id="id"
+        />
       <div class="flex flex-col space-y-1.5">
         <label
           class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -28,7 +33,7 @@
       <div class="flex flex-col space-y-1.5">
         <label
           class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          for="dob"
+          for="birthday"
         >
           Data de Aniversário
         </label>
@@ -38,17 +43,21 @@
           type="date"
         />
       </div>
-    </div>
-    <div class="flex w-full justify-between">
-      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90"
-      id = "Cancelar"
-      type = "button"
-      >
-        Cancelar
-      </button>
-      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-        Salvar
-      </button>
+      <div class="flex w-full justify-between">
+        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90"
+        id = "Cancelar"
+        type = "button"
+        >
+          Cancelar
+        </button>
+        <button 
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90"
+          type="submit"
+          >
+          Salvar
+        </button>
+      </div>
+      </form>
     </div>
   </div>
 </div>

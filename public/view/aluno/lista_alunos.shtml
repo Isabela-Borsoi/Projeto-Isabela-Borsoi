@@ -18,31 +18,7 @@
                   id = "Busca"
                   placeholder="Buscar Alunos..."
                 />
-                <button
-                  type="button"
-                  role="combobox"
-                  aria-controls="radix-:rd:"
-                  aria-expanded="false"
-                  aria-autocomplete="none"
-                  dir="ltr"
-                  data-state="closed"
-                  class="flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-32"
-                >
-               
-                    <select name="mes" id="mes">
-                        <option value="01">Janeiro</option>
-                        <option value="02">Fevereiro</option>
-                        <option value="03">Março</option>
-                        <option value="04">Abril</option>
-                        <option value="05">Maio</option>
-                        <option value="06">Junho</option>
-                        <option value="07">Julho</option>
-                        <option value="08">Agosto</option>
-                        <option value="09">Setembro</option>
-                        <option value="10">Outubro</option>
-                        <option value="11">Novembro</option>
-                        <option value="12">Dezembro</option>
-                    </select>
+
                   <!-- <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -67,85 +43,16 @@
               </div>
             </div>
             <div class="overflow-x-auto">
-              <table class="w-full table-auto border-collapse">
+              <table id="lista_alunos" class="w-full table-auto border-collapse">
                 <thead>
                   <tr class="bg-[#e58ac7] text-black">
+                    <th class="px-4 py-2 text-left">ID</th>
                     <th class="px-4 py-2 text-left">Nome</th>
                     <th class="px-4 py-2 text-left">Data de Nascimento</th>
                     <th class="px-4 py-2 text-left">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border-b hover:bg-muted/50 transition-colors">
-                    <td class="px-4 py-2">John Doe</td>
-                    <td class="px-4 py-2">1990-05-15</td>
-                    <td class="px-4 py-2">
-                      <div class="flex items-center space-x-2">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                          Editar
-                        </button>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                            Deletar
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="border-b hover:bg-muted/50 transition-colors">
-                    <td class="px-4 py-2">Jane Smith</td>
-                    <td class="px-4 py-2">1995-09-20</td>
-                    <td class="px-4 py-2">
-                      <div class="flex items-center space-x-2">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                          Editar
-                        </button>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                            Deletar
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="border-b hover:bg-muted/50 transition-colors">
-                    <td class="px-4 py-2">Michael Johnson</td>
-                    <td class="px-4 py-2">1985-03-01</td>
-                    <td class="px-4 py-2">
-                      <div class="flex items-center space-x-2">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                          Editar
-                        </button>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                            Deletar
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="border-b hover:bg-muted/50 transition-colors">
-                    <td class="px-4 py-2">Emily Davis</td>
-                    <td class="px-4 py-2">1992-11-12</td>
-                    <td class="px-4 py-2">
-                      <div class="flex items-center space-x-2">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                          Editar
-                        </button>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                            Deletar
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="border-b hover:bg-muted/50 transition-colors">
-                    <td class="px-4 py-2">David Lee</td>
-                    <td class="px-4 py-2">1988-06-30</td>
-                    <td class="px-4 py-2">
-                      <div class="flex items-center space-x-2">
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                          Editar
-                        </button>
-                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 px-4 py-2 bg-[#e58ac7] text-black hover:bg-[#e58ac7]/90">
-                            Deletar
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
